@@ -1,0 +1,10 @@
+# Add network MAC addresses here, so that the RPi has predictable interface names
+
+# built-in Ethernet NIC
+# SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="[LAN MAC]", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+
+# USB Ethernet NIC
+# SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="[LAN2 MAC]", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1"
+
+# USB dongle (or RPi3 WLAN)
+# SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="[WLAN MAC]", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan0"

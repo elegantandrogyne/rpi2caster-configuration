@@ -1,0 +1,16 @@
+auto lo
+iface lo inet loopback
+
+allow-hotplug eth0
+iface eth0 inet dhcp
+
+allow-hotplug eth1
+iface eth1 inet static
+address 172.16.0.1
+netmask 255.255.255.0
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 172.16.0.1
+netmask 255.255.255.0
+hostapd /etc/hostapd/hostapd.conf
